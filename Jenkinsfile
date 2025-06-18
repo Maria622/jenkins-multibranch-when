@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Development') {
             when {
-                branch 'Development'
+                branch 'develop'
             }
             steps {
                 echo 'Deploying to development environment...'
@@ -16,7 +16,7 @@ pipeline {
                 echo 'Deployed to Development successfully.'
             }
         }
-        stage('Test') {
+        stage('test') {
             when{
                 branch 'Test'
             }
